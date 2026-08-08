@@ -1,5 +1,4 @@
 // Randomly generate rock, paper, or scissors
-
 function getComputerChoice() {
     const randomNum = Math.floor(Math.random() * 3);
     let cpuChoice = "";
@@ -22,4 +21,13 @@ function getComputerChoice() {
     return cpuChoice;
 }
 
-console.log(getComputerChoice());
+// Get input from player
+function getHumanChoice() {
+    let humanChoice = prompt("Rock, Paper, or Scissors?");
+
+    // Force input to be all in lower case
+    return humanChoice.toLowerCase();
+}
+
+console.log(getHumanChoice());
+//console.log(getComputerChoice());
