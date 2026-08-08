@@ -1,20 +1,23 @@
+// Global variables for keeping score
+let humanScore = 0;
+let computerScore = 0;
+
 // Randomly generate rock, paper, or scissors
 function getComputerChoice() {
     const randomNum = Math.floor(Math.random() * 3);
-    let cpuChoice = "";
 
     switch(randomNum) {
         case 0:
             // Rock
-            cpuChoice = "Rock";
+            let cpuChoice = "rock";
             break;
         case 1:
             // Paper
-            cpuChoice = "Paper";
+            let cpuChoice = "paper";
             break;
         case 2:
             // Scissors
-            cpuChoice = "Scissors";
+            let cpuChoice = "scissors";
             break;
     }
 
@@ -27,6 +30,10 @@ function getHumanChoice() {
 
     // Force input to be all in lower case
     return humanChoice.toLowerCase();
+}
+
+function playRound(humanChoice, computerChoice) {
+
 }
 
 console.log(getHumanChoice());
