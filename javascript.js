@@ -56,7 +56,11 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+// Play multiple rounds
+function playAnotherRound(numberOfRounds) {
+    for (let i = 0; i < numberOfRounds; i++) {
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+}
 
-playRound(humanSelection, computerSelection);
+playAnotherRound(5);
